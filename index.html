@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shooping Cart</title>
+
+	<!-- Icono -->
+	<link rel="shortcut icon" href="img/icono.svg" type="image/x-icon">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<!-- Bootstrap 5 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Estilo -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Elementos para comprar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">Shopping Cart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+						<li class="nav-item">
+							<a class="nav-link waves-effect">
+								<template id="template-icon-cart"><span class="badge bg-secondary">0</span></template>
+							  <i class="fas fa-shopping-cart"></i>
+							  <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+							</a>
+						  </li>
+                        
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container pt-5">
+		<div class="row pt-5" id="cards"></div>
+		<table class="table">
+			<thead>
+			  <tr>
+				<th scope="col">#</th>
+				<th scope="col">Item</th>
+				<th scope="col">Cantidad</th>
+				<th scope="col">Acción</th>
+				<th scope="col">Total</th>
+			  </tr>
+			</thead>
+			<tbody id="items"></tbody>
+			<tfoot>
+			  <tr id="footer">
+				<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+			  </tr>
+			</tfoot>
+		  </table>
+		  <template id="template-footer">
+			<th scope="row" colspan="2">Total productos</th>
+			<td>10</td>
+			<td>
+				<button class="btn btn-danger btn-sm" id="vaciar-carrito">
+					vaciar todo
+				</button>
+			</td>
+			<td class="font-weight-bold">$ <span>5000</span></td>
+		</template>
+		
+		<template id="template-cart">
+		  <tr>
+			<th scope="row">id</th>
+			<td>Café</td>
+			<td>1</td>
+			<td>
+				<button class="btn btn-info btn-sm">
+					<i class="fas fa-plus"></i>
+				</button>
+				<button class="btn btn-danger btn-sm">
+					<i class="fas fa-minus"></i>
+				</button>
+			</td>
+			<td>$ <span>500</span></td>
+		  </tr>
+		</template>
+
+	</div>
+<!-- Elementos -->
+	<template id="template-card">
+		<div class="col-12 mb-2 col-md-4">
+		  <div class="card">
+			  <img src="" alt="" class="img-responsive card-img-top">
+			<div class="card-body">
+			  <h5>Titulo</h5>
+			  <p>Precio</p>
+			  <button class="btn btn-dark">Comprar</button>
+			</div>
+		  </div>
+		</div>
+	  </template>
+	  <!-- Footer -->
+	  <footer class="text-center text-white " style="background-color: #5ac8de;">
+		<!-- Grid container -->
+		<div class="container pt-4">
+		  <!-- Section: Social media -->
+		  <section class="mb-4">
+			<!-- Facebook -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-dark m-1"
+			  href="www.facebook.com"
+			  role="button"
+			  data-mdb-ripple-color="dark"
+			  ><i class="fab fa-facebook-f facebook"></i
+			></a>
+	  
+			<!-- Twitter -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-dark m-1"
+			  href="www.twitter.com"
+			  role="button"
+			  data-mdb-ripple-color="dark"
+			  ><i class="fab fa-twitter"></i
+			></a>
+	  
+			<!-- Linkedin -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-dark m-1"
+			  href="https://www.linkedin.com/in/benito-ortiz/"
+			  role="button"
+			  data-mdb-ripple-color="dark"
+			  ><i class="fab fa-linkedin"></i
+			></a>
+			<!-- Github -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-dark m-1"
+			  href="https://github.com/benito281"
+			  role="button"
+			  data-mdb-ripple-color="dark"
+			  ><i class="fab fa-github"></i
+			></a>
+		  </section>
+		  <!-- Section: Social media -->
+		</div>
+		<!-- Grid container -->
+	  
+		<!-- Copyright -->
+		<div class="text-center text-dark p-3" style="background-color: #0d6efd;">
+		  © 2021 Copyright Benito Ortiz
+		</div>
+		<!-- Copyright -->
+	  </footer>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

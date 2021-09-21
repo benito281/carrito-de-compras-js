@@ -1,0 +1,8 @@
+* DOMContentLoaded: DOM está listo, por lo que el controlador puede buscar nodos DOM, inicializar la interfaz. 
+En otras palabras este evento se ejecutara cuando la pagina y los recursos html se hallan cargado.
+* content: nos permite acceder a las propiedades de los template html
+* createDocumentFragment(): entro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla. 
+Este elemento es volatil
+* stopPropagation(): es un metodo de la interfaz Event evita la propagación adicional del evento actual en las
+ fases de captura y bubbling.
+*   hasOwnProperty(): devuelve un booleano indicando si el objeto tiene la propiedad especificada.
